@@ -1,14 +1,6 @@
-import java.security.spec.RSAOtherPrimeInfo;
-import java.util.Random;
-
 public class Main{
 
-
-
-
-
     public static void main(String[] args){
-
 
         // Criando 1º plano.
 
@@ -16,6 +8,13 @@ public class Main{
         plus.id = 1;
         plus.nome = "Plano Plus";
         plus.vantagens = "Acesso total";
+
+
+
+        Planos standart = new Planos();
+        standart.id = 2;
+        standart.nome = "Plano Standart";
+        standart.vantagens = "Acesso Limitado";
 
 
         // Criando 1º filme.
@@ -38,15 +37,22 @@ public class Main{
         user1.nome = "Mateus";
         user1.idade = 18;
         user1.idplano = 1;
+        user1.plano = plus;
 
-        if(f2.included == true || user1.idplano == plus.id){
-            System.out.println("Filme liberado.");
-        }else{
-            System.out.println("Filme não incluso.");
+        // Criando 2ºuser.
+        User user2 = new User();
+        user2.nome = "Mateus";
+        user2.idade = 18;
+        user2.idplano = 1;
+        user2.plano = standart;
+
+        Validacoes.ValidarPlano(f2, user2);
         }
-
 
     }
 
 
-}
+
+
+
+
