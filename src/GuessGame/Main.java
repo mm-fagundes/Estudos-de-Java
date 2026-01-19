@@ -1,0 +1,11 @@
+package GuessGame;
+
+public class Main {
+
+    static void main(String[] args) {
+
+        Guess.Adivinhar();
+
+    }
+
+}
