@@ -8,6 +8,6 @@ public class Main {
 
         Objetos objetos = new Objetos();
         Animal animal = new Animal();
-        animal.exibeFicha(gato1);
+
     }
 }
