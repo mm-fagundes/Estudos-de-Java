@@ -2,6 +2,6 @@
 
 <br>
 
-<h3>Atualmente nesse repositório estão presentes</h4>
+<h3>Atualmente nesse repositório estão presentes: </h4>
 <h4>✓ Estudo de Polimorfismo com heranças e interfaces.</h3>
 
