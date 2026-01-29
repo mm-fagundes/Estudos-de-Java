@@ -1,6 +1,6 @@
 package EstudosInterfaces.midias;
 
-public class Episodio extends Titulo implements Classificavel{
+public class Episodio extends Titulo{
     private double duracaoEpisodio;
     private Serie serie;
     private Temporada temporada;
@@ -29,8 +29,4 @@ public class Episodio extends Titulo implements Classificavel{
         this.temporada = temporada;
     }
 
-    @Override
-    public double getRate() {
-        return 0;
-    }
 }

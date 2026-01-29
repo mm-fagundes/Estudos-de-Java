@@ -4,8 +4,12 @@ import EstudosInterfaces.midias.Titulo;
 public class Avaliador {
 
     public void avaliar(Titulo titulo, double avaliacao){
-        titulo.setSomaAvaliacoes(titulo.getSomaAvaliacoes() + avaliacao);
-        titulo.setNumeroAvaliacoes(titulo.getNumeroAvaliacoes() + 1);
+        if(avaliacao <= 5) {
+            titulo.setSomaAvaliacoes(titulo.getSomaAvaliacoes() + avaliacao);
+            titulo.setNumeroAvaliacoes(titulo.getNumeroAvaliacoes() + 1);
+        } else{
+            System.out.println("A nota maxima permitida é 5.");
+        }
     }
 
 

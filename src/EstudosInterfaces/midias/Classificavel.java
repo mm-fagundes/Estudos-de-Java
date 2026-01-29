@@ -1,5 +1,5 @@
 package EstudosInterfaces.midias;
 
 public interface Classificavel {
-    double getRate();
+    String getRate();
 }

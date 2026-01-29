@@ -12,7 +12,10 @@ public class Serie extends Titulo implements Classificavel{
     }
 
     @Override
-    public double getRate() {
-        return 0;
+    public String getRate() {
+        int estrelas = getEstrelas();
+        if(estrelas >= 5){return "Serie favorita atualmente!";}
+        if(estrelas >= 3){return "Serie excelente! Altamente recomendada!";}
+        return "Essa serie pode esperar, vamos com outra primeiro.";
     }
 }

@@ -21,7 +21,10 @@ public class Filme extends Titulo implements Classificavel{
     }
 
     @Override
-    public double getRate() {
-        return 0;
+    public String getRate() {
+        int estrelas = getEstrelas();
+        if(estrelas >= 5){return "Filme favorito atualmente!";}
+        if(estrelas >= 3){return "Filme excelente! Altamente recomendado!";}
+        return "Esse filme pode esperar, vamos com outro primeiro.";
     }
 }

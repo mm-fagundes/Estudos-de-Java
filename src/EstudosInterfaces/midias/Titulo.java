@@ -5,6 +5,8 @@ public class Titulo{
     private double somaAvaliacoes = 0;
     private int numeroAvaliacoes = 0;
 
+
+
     private String descricao;
 
     public String getNome() {
@@ -16,22 +18,23 @@ public class Titulo{
     }
 
     public double getSomaAvaliacoes() {
-        if(numeroAvaliacoes == 0){return 0;}
-        else{
-            double media =  somaAvaliacoes / numeroAvaliacoes;
-            if(media <= 2){return 1;}
-            else if(media <=4){return 2;}
-            else if(media <= 6){return 3;}
-            else if(media <= 8){return 4;}
-            else if(media <= 10){return 5;}
-
-        }
-        return 0;
-
+        return somaAvaliacoes;
     }
 
     public void setSomaAvaliacoes(double somaAvaliacoes) {
         this.somaAvaliacoes = somaAvaliacoes;
+    }
+
+    public int getEstrelas(){
+        if(numeroAvaliacoes == 0){return 0;}
+        double mediaAvaliacoes = somaAvaliacoes / numeroAvaliacoes;
+        if(mediaAvaliacoes <= 0){return 0;}
+        if(mediaAvaliacoes <= 1){return 1;}
+        if(mediaAvaliacoes <= 2){return 2;}
+        if(mediaAvaliacoes <= 3){return 3;}
+        if(mediaAvaliacoes <= 4){return 4;}
+        if(mediaAvaliacoes <= 5){return 5;}
+        return 5;
     }
 
     public String getDescricao() {
